@@ -10,25 +10,9 @@ import os
 import serial
 from gtts import gTTS
 # from video_image import front
-import pyrebase
+#import pyrebase
 
-config = {
-
-    "apiKey": "AIzaSyBc44bhKz0EGbG_HM40bcJwMr80ggtqUUA",
-    "authDomain": "help-doctors.firebaseapp.com",
-    "databaseURL": "https://help-doctors.firebaseio.com",
-    "projectId": "help-doctors",
-    "storageBucket": "help-doctors.appspot.com",
-    "messagingSenderId": "531069214866",
-    "appId": "1:531069214866:web:6276e748a781020889064b",
-    "measurementId": "G-CYEMBLS8SW"
-}
-
-firebase = pyrebase.initialize_app(config)
-
-auth = firebase.auth()
-
-
+#
 
 
 def Index(request):
