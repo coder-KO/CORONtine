@@ -1,10 +1,9 @@
 /*
 Final hardware code for Patient Postioning Module
 HackCovid19
-Team : Dev.ino
-Code by:-
-Krishna Ojha
-Ekta Arora
+Team    :-  Dev.ino
+Code by :-  Krishna Ojha
+            Ekta Arora
 */
 #include <Servo.h>
 Servo My_servo;
@@ -62,7 +61,7 @@ void loop() {
     // Serial.println(ultra_distance[j]);          // debugging
     
     if(ultra_distance[j] <= detection_distance){
-      Serial.println(F("Person detected!"));
+      //Serial.println(F("Person detected!"));
       person_distance = ultra_distance[j];  // Updating live position of person
       person_flag = position_person();      
       break;
@@ -74,7 +73,6 @@ void loop() {
     conf = 1;  
   }
   Serial.println(conf); // Send confirmation to run ML script to serial port
-  Serial.flush();
 }
 
 
@@ -90,43 +88,32 @@ int position_person(){
   //  Serial.println(diff);                         // debugging      
 
   // To check wether person is in desired range                     
-  if(diff >= 2){
-  while(diff >= 2){
+  if(diff >= 3){
+  while(diff >= 3){
       person_distance = measure_distance_cm();
       diff = abs(person_distance - mean_distance);  // recalculate difference for while loop
-      
-      /* 
-        debugging
-        Serial.print(F("Current Difference = "));
-        Serial.println(diff);
-        Serial.println(F("position_person while"));
-      */
+     
       if(person_distance > mean_distance){
         // Person is behind the mark
-        Serial.print(F("Come closer by (cm)- "));
+        Serial.println(F("1111"));
+        delay(1000);
         Serial.println(person_distance - mean_distance);
-        Serial.flush();
         delay(5000);
-        
       }
       else if (person_distance < mean_distance){
         // Person is ahead of the mark  
-        Serial.print(F("Go back by (cm)- "));
+        Serial.println(F("2222"));
+        delay(1000);
         Serial.println(abs(person_distance - mean_distance));
-        Serial.flush();
         delay(5000);        
-      }
-      else{
-        // Person is on the mark
-        dist_flag = 1;
-        return 1;
-      }      
+      }    
     }    
   }
   else{
     dist_flag = 1;
-    //    Serial.println(F("Person is at right distance.!")); // debugging
-    return 1;                                                 // This will set the person_flag;
+    Serial.println(F("0000"));
+    delay(1000);
+    //Serial.println(F("Person is at right distance.!")); // debugging
   }
 }
 
