@@ -21,5 +21,5 @@ urlpatterns = [
 ]
 
 urlpatterns += [
-       path('devino',include('crackit.urls'))
+       path('devino/',include('crackit.urls'))
 ]
