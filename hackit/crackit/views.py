@@ -25,7 +25,7 @@ def Index(request):
     while 1:
         flag_dis = 0;
         # reading from arduino serial monitor
-        # data = int(arduino.readline())  # acknowledgement flag
+        data = int(arduino.readline())  # acknowledgement flag
         # data = 1111
         print(data)
 
