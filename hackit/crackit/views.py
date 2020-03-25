@@ -14,7 +14,7 @@ import time
 import random
 from video_image import front
 from test import prediction
-# arduino = serial.Serial('COM9', 9600)
+arduino = serial.Serial('COM9', 9600)
 
 
 
@@ -26,7 +26,7 @@ def Index(request):
         flag_dis = 0;
         # reading from arduino serial monitor
         # data = int(arduino.readline())  # acknowledgement flag
-        data = 1111
+        # data = 1111
         print(data)
 
         if data != 0000:
@@ -38,9 +38,9 @@ def Index(request):
             else:
                 break
             lan = 'en'
-            # flag_dis=1
-            # data2 = int(arduino.readline()) # distance
-            data2=6
+            flag_dis=1
+            data2 = int(arduino.readline()) # distance
+            # data2=6
             print(data2)
             text += str(data2)
             text += "cm"
