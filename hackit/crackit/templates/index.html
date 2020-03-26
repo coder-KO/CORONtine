@@ -1,28 +1,42 @@
 <!doctype html>
+{% load static %}
 
 <html lang="en">
 <head>
     <meta charset="utf-8">
 
     <title>CORONtine</title>
-            <link rel = "icon" href = "static/imgs/CORONtine(icon).png" type = "image/x-icon"> 
+            <link rel = "icon" href = "{% static 'images/imgs/CORONtine(icon).png' %}" type = "image/x-icon">
     <meta name="description" content="The HTML5 Herald">
     <meta name="author" content="SitePoint">
 
-    <link rel="stylesheet" href="static/style.css">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
 
 </head>
 
+<script type="text/javascript">
+setTimeout(openUrl, 5000); // Wait 5 seconds
+
+function openUrl(){
+
+   window.open('http://127.0.0.1:8000/devino/detect');
+
+}
+
+
+
+</script>
+
 <body>
 <div class="image-box">
-  <div 
-    class="image-box__background" 
+  <div
+    class="image-box__background"
     style="--image-url: url('imgs/bg.jpg')"
   ></div>
   <div class="image-box__overlay"></div>
   <div class="image-box__content">
     <!-- <h1>CORONtine</h1> -->
-    <img src="static/imgs/CORONtine.png">
+    <img src="{% static '/images/imgs/CORONtine.png' %}">
   </div>
 </div>
 
