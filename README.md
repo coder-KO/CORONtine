@@ -1,5 +1,8 @@
 # Dev.ino_HackCovid19
 
+Check our pitch for more understanding
+https://github.com/coder-KO/Dev.ino_HackCovid19/blob/master/CORONtine.pdf
+
 # CORONtine
 CORONtine automates the process of seggregating possible Corona Virus (COVID19) suspects by scanning them for common COVID19 symptoms without direct human involvement.
 
