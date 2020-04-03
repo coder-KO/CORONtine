@@ -25,7 +25,7 @@ model.compile(loss='mean_squared_error',
 
 def prediction(id):
 
-    test_dir = '/home/ekta3501/opensource/Dev.ino_HackCovid19/hackit/images/'+id+'/'
+    test_dir = 'F:\Github\HackCovid\Dev.ino_HackCovid19\hackit\images'+id+'/'
 
     onlyfiles = [f for f in listdir(test_dir) if isfile(join(test_dir, f))]
     #

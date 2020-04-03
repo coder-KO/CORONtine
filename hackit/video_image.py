@@ -79,7 +79,7 @@ def sideways():
 
 def front(username):
     cap = cv2.VideoCapture(0)
-    dir = '/home/ekta3501/opensource/Dev.ino_HackCovid19/hackit/images/'+username
+    dir = 'F:\Github\HackCovid\Dev.ino_HackCovid19\hackit\images'+username
     try:
         os.mkdir(dir)
     except:

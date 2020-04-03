@@ -25,7 +25,7 @@ def Index(request):
     while 1:
         flag_dis = 0;
         # reading from arduino serial monitor
-        # data = int(arduino.readline())  # acknowledgement flag
+        data = int(arduino.readline())  # acknowledgement flag
         # data = 1111
         print(data)
 
@@ -80,6 +80,18 @@ def take_images(request):
       count = prediction(str(v))
 
       if(count>=2):
+          text = "You need to be quarantined"
+          lan = 'en'
+          myobj = gTTS(text=text, lang=lan, slow=False)
+          myobj.save("guide.mp3")
+          pygame.mixer.init()
+          pygame.mixer.music.load("guide.mp3")
+          pygame.mixer.music.play()
+          while pygame.mixer.music.get_busy():
+              time.sleep(20)
+              # pygame.time.Clock().tick(500)
+          pygame.mixer.music.load("beep.mp3")
+          os.remove("guide.mp3")
           return render(request,"warning.html")
 
       return render(request,"index.html")

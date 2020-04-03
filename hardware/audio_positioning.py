@@ -18,7 +18,7 @@ while 1:
     if data != 0000:
         # Checking person's position
         if data == 1111:
-            text = "please move closer by"
+            text = "please move back by"
         elif data == 2222:
             text = "please move back by"
         else:
@@ -40,7 +40,7 @@ while 1:
     pygame.mixer.music.load("guide.mp3")
     pygame.mixer.music.play()
     while pygame.mixer.music.get_busy():
-        time.sleep(20)
+        time.sleep(5)
         #pygame.time.Clock().tick(500)
     pygame.mixer.music.load("beep.mp3")
     os.remove("guide.mp3")
