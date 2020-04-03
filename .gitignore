@@ -18,3 +18,7 @@ shape_predictor_68_face_landmarks.dat
 try.py
 try1.py
 try2.py
+/chest
+/model_for_chest_xrays/model1_6_10.h5
+/model_for_chest_xrays/model1_6_15.h5
+
