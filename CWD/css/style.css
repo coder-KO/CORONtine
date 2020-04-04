@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+.logo_brand{
+	margin-top: -5px;
+	height: 30px;
+	width: 30px;
+}
+
+#menu ul li a:hover{
+	background-color: forestgreen;
+	color:white;
+	font-weight: bold;
+	border-radius: 5px;
+}
+
+@media only screen and (max-width: 768px){
+	[class*="col-"]{
+		width: 100%;
+	}
+}
+
+.home{
+	background-image: url('/img/bg.jpg'); 
+	background-repeat: no-repeat; 
+	background-size: cover; 
+	background-position: center center;
+	height: 80vh;
+	width: 100%;
+}
+.view div img{
+	height: 300px;
+	width: 300px;
+}
+
+.container{
+	width: 100%;
+}
+
+#dashboard{
+	height: 100vh;
+}
+#parameters{
+}
+#main_area{
+	width: 70%; 
+	height: 70vh;
+}
+
+#developer{
+	height: 80vh;
+}
+#developers h1{
+	margin: auto;
+	font-family: 'Acme', sans-serif;
+}
+
+footer{
+	color: #ffffff;
+}
+footer img{
+	height: 45px;
+	width: 60px;
+}
