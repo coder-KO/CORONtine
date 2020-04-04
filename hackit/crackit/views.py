@@ -84,13 +84,11 @@ def Detect(request):
     while 1:
         flag_dis = 0;
         # reading from arduino serial monitor
-<<<<<<< HEAD
-        data = int(arduino.readline())  # acknowledgement flag
+
+        # data = int(arduino.readline())  # acknowledgement flag
         # data = 1111
-=======
         # data = int(arduino.readline())  # acknowledgement flag
         data = 1111
->>>>>>> cadcd62876fbf2edca9d724c79c21df4be2cea2e
         print(data)
 
         if data != 0000:
@@ -148,18 +146,6 @@ def take_images(request):
           text = "You need to be quarantined"
           lan = 'en'
           myobj = gTTS(text=text, lang=lan, slow=False)
-<<<<<<< HEAD
-          myobj.save("guide.mp3")
-          pygame.mixer.init()
-          pygame.mixer.music.load("guide.mp3")
-          pygame.mixer.music.play()
-          while pygame.mixer.music.get_busy():
-              time.sleep(20)
-              # pygame.time.Clock().tick(500)
-          pygame.mixer.music.load("beep.mp3")
-          os.remove("guide.mp3")
-=======
-          # myobj.save("guide.mp3")
           # pygame.mixer.init()
           # pygame.mixer.music.load("guide.mp3")
           # pygame.mixer.music.play()
@@ -168,7 +154,6 @@ def take_images(request):
           #     # pygame.time.Clock().tick(500)
           # pygame.mixer.music.load("beep.mp3")
           # os.remove("guide.mp3")
->>>>>>> cadcd62876fbf2edca9d724c79c21df4be2cea2e
           return render(request,"warning.html")
 
       return render(request,"index.html")
