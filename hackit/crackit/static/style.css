@@ -1,8 +1,7 @@
-<<<<<<< HEAD
 .image-box {
     position: relative;
 }
-  
+
 .image-box__background,
 .image-box__overlay {
     position: absolute;
@@ -21,7 +20,7 @@
 
 .image-box__overlay {
     background: rgba(0, 0, 0, 0.5);
-    
+
     z-index: 2;
 }
 
@@ -40,11 +39,12 @@
 img{
     height: 350px;
     width: 350px;
-=======
+
+}
 .image-box {
     position: relative;
 }
-  
+
 .image-box__background,
 .image-box__overlay {
     position: absolute;
@@ -63,7 +63,7 @@ img{
 
 .image-box__overlay {
     background: rgba(0, 0, 0, 0.5);
-    
+
     z-index: 2;
 }
 
@@ -82,5 +82,4 @@ img{
 img{
     height: 350px;
     width: 350px;
->>>>>>> cadcd62876fbf2edca9d724c79c21df4be2cea2e
 }

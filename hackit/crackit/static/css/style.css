@@ -19,9 +19,9 @@
 }
 
 .home{
-	background-image: url('/img/bg.jpg'); 
-	background-repeat: no-repeat; 
-	background-size: cover; 
+	/* background-image: url('/img/bg.jpg');  */
+	background-repeat: no-repeat;
+	background-size: cover;
 	background-position: center center;
 	height: 80vh;
 	width: 100%;
@@ -41,7 +41,7 @@
 #parameters{
 }
 #main_area{
-	width: 70%; 
+	width: 70%;
 	height: 70vh;
 }
 
