@@ -134,7 +134,7 @@
     <div class="row">
       <!-- Scan Button -->
       <div class="col-md-6">
-        <a href="#" class="btn btn-primary d-block" id="scan_btn"><h2><i class="fab fa-cloudscale fa-2x"></i> Scan</h4></a>
+        <a href="{% url 'detection' %}" class="btn btn-primary d-block" id="scan_btn"><h2><i class="fab fa-cloudscale fa-2x"></i> Scan</h4></a>
       </div>
       <!-- Stats Button -->
       <div class="col-md-6">
@@ -156,11 +156,23 @@
 
       </div>                          <!-- ./Nested parent column -->
 
-      <div class="com-xl-9 bg-warning mx-auto safe" id="main_area">          <!-- Main area column -->
-        <div class="view">
-          <img src="{% static 'images/imgs/CORONtine(icon).png' %}" style="height: 200px; width:200px;">
+ <!-- changing background image according to the scanning -->
+
+      {% if data %}
+          <div class="com-xl-9 bg-warning mx-auto safe" id="main_area" style="background-image: url('{% static 'images/imgs/quarantine.png' %}')";>          <!-- Main area column -->
+           <div class="view">
+          <img src="{% static 'images/imgs/devino.png' %}" style="height: 200px; width:200px;">
         </div>
-      </div>                          <!-- Main area column -->
+      </div>
+
+    {% else %}
+    <div class="com-xl-9 bg-warning mx-auto safe" id="main_area"  style="background-image: url('{% static 'images/imgs/CORONtine.png' %}')";>          <!-- Main area column -->
+      <div class="view">
+      <img src="{% static 'images/imgs/devino.png' %}" style="height: 200px; width:200px;">
+     </div>
+    </div>
+
+    {% endif %}                      <!-- Main area column -->
 
     </div>          <!-- ./Parent Row -->
     <!-- Scanning Parameters -->

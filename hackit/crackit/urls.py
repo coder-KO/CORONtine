@@ -7,5 +7,6 @@ urlpatterns = [
    path('',views.Index,name='index_page'),
    path('image',views.take_images,name="images"),
    path('detect',views.Detect,name="detection"),
+   # path('random',views.random,name='random'),
 
 ]
