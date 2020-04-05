@@ -1,3 +1,4 @@
+/* #7fbf73 - green */
 @import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
 .logo_brand{
 	margin-top: -5px;
@@ -38,11 +39,45 @@
 #dashboard{
 	height: 100vh;
 }
+.btn{
+	background-color: #212121;
+	color: #7fbf73;
+	margin: 10px 20px 10px 20px;
+	border-radius: 10px;
+}
+.btn:hover{
+	background-color: #7fbf73;
+	color: #212121;
+}
+.btn_text{
+	font-size: 34px;
+}
+
 #parameters{
+	margin-left: 40px;
 }
 #main_area{
 	width: 70%;
 	height: 70vh;
+	margin-right: 20px;
+	border-radius: 10px;
+	background-color: #212121;
+}
+#main_area img{
+	margin: auto;
+	margin-top: 10%;
+	height: 40vh;
+	width: auto;
+}
+
+#btn-one{
+	width: 100%;
+	height: 10vh;
+	margin-left: 0;
+	margin-top: 20px;
+	background-color: #212121;
+	color: #7fbf73;
+	font-size: larger;
 }
 
 #developer{

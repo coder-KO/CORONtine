@@ -3,6 +3,6 @@
 //   });
 
 $('#scan_btn').click(function() {
-    $('#btn-prm').addClass('spinner-grow spinner-grow-sm');
-    $('#btn-prm').addClass('disabled')
+    $('.btn-prm').addClass('spinner-grow spinner-grow-sm');
+    $('.btn-prm').addClass('disabled')
   });
