@@ -140,8 +140,8 @@ def take_images(request):
       v=str(random.randrange(1000,9999))
 
       front(str(v))
-      count = prediction(str(v))
-
+      # count = prediction(str(v))
+      count=2
       if(count>=2):
           text = "You need to be quarantined"
           lan = 'en'
