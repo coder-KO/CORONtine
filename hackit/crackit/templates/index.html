@@ -82,15 +82,15 @@
 
   <!-- Home Section -->
   <div class="view home" id="home" style="background-image: url('{% static 'imgs/bg.jpg' %}')";>
-    <div class="mask pattern-3 flex-center">
+    <div class="flex-center" style="background: rgba(0,0,0,0.7);">
         <img src="{% static 'images/imgs/CORONtine.png'%}" alt="CORONtine">
     </div>
 </div>
   <!-- ./Home Section -->
 
-
+<div style="background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.7)), url('{% static 'imgs/bg_dev.png' %}')";>
   <!-- Dashboard Section -->
-  <div id="dashboard">
+  <div id="dashboard" class="bg-light">
     <!-- Title part -->
     <div class="row py-3 px-5 text-white bg-dark">
       <h2><i class="fas fa-chart-bar"></i> Dashboard</a></h2>
@@ -149,11 +149,10 @@
   </div>
   <!-- ./Dashboard Section -->
 
-
   <!-- Developers section -->
   <div class="container-fluid" id="developers">
     <div class="row p-5">
-      <h1>Developers</h1>
+      <h1 style="color: #7fbf73;">Developers</h1>
     </div>
     <div class="row">
 
@@ -194,7 +193,7 @@
       <!-- ./Ekta -->
 
       <!-- Krishna -->
-      <div class="col-4 mx-auto">
+      <div class="col-4 mx-auto my-auto">
         <div class="card card-cascade wider">
 
           <!-- Card image -->
@@ -229,15 +228,16 @@
       </div>
       <!-- ./Krishna -->
     </div>
+    <div class="row my-lg-5"></div>
   </div>
   <!-- ./Developers Section -->
 
   <!-- Footer Section -->
-    <footer class="bg-dark my-0">
-      <h4 class="text-center my-4 py-4">&copy; Dev.ino <img src="{% static 'images/imgs/devino.png' %}" alt="Dev.ino"></h4>
+    <footer class="my-0 bg-light">
+      <h1 class="text-center my-4 py-4" style="color: #212121;">&copy; <img src="{% static 'images/imgs/devino.png' %}" alt="Dev.ino" style="width: auto; height: 80px;"></h1>
     </footer>
     <!-- ./Footer Section -->
-
+  </div>
 
     <!-- SCRIPTS -->
     <!-- JQuery -->
