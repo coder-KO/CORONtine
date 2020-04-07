@@ -34,9 +34,11 @@ model.compile(loss="categorical_crossentropy",
 )
 
 
+dir = 'F:\Github\HackCovid\Dev.ino_HackCovid19\hackit\image_store'
+path = 'F:\Github\HackCovid\Dev.ino_HackCovid19\hackit\predicted'
 
-dir = '/home/ekta3501/opensource/Dev.ino_HackCovid19/image_store/'
-path = '/home/ekta3501/opensource/Dev.ino_HackCovid19/predicted/'
+# dir = '/home/ekta3501/opensource/Dev.ino_HackCovid19/image_store/'
+# path = '/home/ekta3501/opensource/Dev.ino_HackCovid19/predicted/'
 
 def predicting_cough():
     cap = cv.VideoCapture(0)
