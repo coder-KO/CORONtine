@@ -13,7 +13,7 @@ import pygame
 import time
 import random
 from video_image import front
-from test import prediction
+from live_test import predicting_cough
 # arduino = serial.Serial('COM9', 9600)
 
 
@@ -83,16 +83,17 @@ def Detect(request):
 
 def take_images(request):
       v=str(random.randrange(1000,9999))
-      data = 0
-      front(str(v))
-      count = prediction(str(v))
-    #   count=2
-      if(count>=2):
-          text = "You need to be quarantined"
-          lan = 'en'
-          myobj = gTTS(text=text, lang=lan, slow=False)
-          data = 1
-          # pygame.mixer.init()
+      data = predicting_cough()
+
+    #   front(str(v))
+    #   count = prediction(str(v))
+    # #   count=2
+    #   if(count>=2):
+    #       text = "You need to be quarantined"
+    #       lan = 'en'
+    #       myobj = gTTS(text=text, lang=lan, slow=False)
+    #       data = 1
+    #       # pygame.mixer.init()
           # pygame.mixer.music.load("guide.mp3")
           # pygame.mixer.music.play()
           # while pygame.mixer.music.get_busy():
