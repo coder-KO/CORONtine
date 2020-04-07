@@ -22,3 +22,7 @@ try2.py
 /model_for_chest_xrays/model1_6_10.h5
 /model_for_chest_xrays/model1_6_15.h5
 
+/predicted
+/image_store
+async_try.py
+/hackit/Procfile
