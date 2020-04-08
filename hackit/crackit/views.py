@@ -20,6 +20,8 @@ from test import test_chest
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
+import matplotlib.image as mpimg
+import matplotlib.pyplot as plt
 
 
 
@@ -52,14 +54,9 @@ def take_images(request):
 def chest_scan(request):
     data = test_chest()  #if data == 1 => non covid person
 
-    # img = cv2.imread('/home/ekta3501/opensource/Dev.ino_HackCovid19/chest/test/covid-19-caso-70-1-PA.jpg',
-    # 				cv2.IMREAD_GRAYSCALE)
-    #
-    # img  = cv2.resize(img,(700,900))
-    #
-    # cv2.imshow('image', img)
-    # cv2.waitKey(0)
-    # cv2.destoryAllWindows()
+    img = mpimg.imread('/home/ekta3501/opensource/Dev.ino_HackCovid19/chest/test/covid-19-caso-70-1-PA.jpg')
+    plt.imshow(img)
+    plt.show()
 
     if data:
         val = 0
