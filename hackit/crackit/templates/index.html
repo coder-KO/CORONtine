@@ -35,6 +35,22 @@
   <link href="{% static 'css/style.css'%}" rel="stylesheet">
 </head>
 
+<script type="text/javascript">
+
+ var a = {{ data }};
+
+ if (a){
+
+       setTimeout(openUrl, 2000);
+       function openUrl(){
+
+         window.open('http://127.0.0.1:8000/devino/chest_scan',"_self");
+
+              }
+       }
+
+</script>
+
 <body>
 
   <!-- Navigation Menu -->
@@ -81,7 +97,10 @@
 
 
   <!-- Home Section -->
-  <div class="view home" id="home" style="background-image: url('{% static 'imgs/bg.jpg' %}')";>
+  <div class="view home" id="home" style="background-image: url('{% static 'imgs/bg.jpg' %}'); background-repeat: no-repeat;background-size:cover;
+	background-position: center;
+	height: 80vh;
+	width: 100%;";>
     <div class="flex-center" style="background: rgba(0,0,0,0.7);">
         <img src="{% static 'images/imgs/CORONtine.png'%}" alt="CORONtine">
     </div>
@@ -93,7 +112,7 @@
   <div id="dashboard" class="bg-light">
     <!-- Title part -->
     <div class="row py-3 px-5 text-white bg-dark">
-      <h2><i class="fas fa-chart-bar"></i> Dashboard</a></h2>
+      <h2><i class="fas fa-chart-bar"></i> Dashboard</h2>
     </div>
     <!-- ./Title Part -->
 
@@ -127,17 +146,38 @@
 
       {% if data %}
           <div class="com-xl-9" id="main_area">          <!-- Main area column -->
-           <div class="view">
+           <div class="view bg-dark">
           <img src="{% static 'images/imgs/quarantine.png' %}">
         </div>
       </div>
 
     {% else %}
+    <!-- conditions after chest scan -->
+            {% if val %}
+            <div class="com-xl-9" id="main_area";>          <!-- Main area column -->
+              <div class="view">
+
+                <img src="{% static 'images/imgs/quarantine.png' %}">
+                </div>
+                </div>
+
+                {% else %}
+                <div class="com-xl-9" id="main_area";>          <!-- Main area column -->
+                  <div class="view">
+                    <img src="{% static 'images/imgs/devino.png' %}">
+
+
+
+
+
+                  </div>
+                </div>
+             {% endif %}
+
     <div class="com-xl-9" id="main_area";>          <!-- Main area column -->
-      <div class="view">
-        
+      <div class="view bg-dark">
       <img src="{% static 'images/imgs/devino.png' %}">
-      
+
      </div>
     </div>
 
@@ -176,17 +216,16 @@
             <!-- Subtitle -->
             <h5 class="blue-text pb-2"><strong>ML Enthusiast and Backend Developer</strong></h5>
             <!-- Text -->
-            <p class="card-text">Sed ut perspiciatis unde omnis iste natus sit voluptatem accusantium doloremque
-              laudantium, totam rem aperiam. </p>
+            <p class="card-text">I am backend developer having expereince with frameworks like Django, Node Js I love training models to build amazing stuffs . Currently I am working on interating IOT with ML </p>
 
             <!-- Linkedin -->
-            <a class="px-2 fa-lg li-ic"><i class="fab fa-linkedin-in"></i></a>
+            <a class="px-2 fa-lg li-ic" href="https://www.linkedin.com/in/ekta-arora-5a264b176/"><i class="fab fa-linkedin-in"></i></a>
             <!-- Twitter -->
-            <a class="px-2 fa-lg tw-ic"><i class="fab fa-twitter"></i></a>
+            <a class="px-2 fa-lg tw-ic" href="https://twitter.com/aroraekta351"><i class="fab fa-twitter"></i></a>
             <!-- Github -->
-            <a class="px-2 fa-lg gb-ic"><i class="fab fa-github"></i></a>
+            <a class="px-2 fa-lg gb-ic" href="https://github.com/ektaarora3501"><i class="fab fa-github"></i></a>
             <!-- Instagram -->
-            <a class="px-2 fa-lg ig-ic"><i class="fab fa-instagram"></i></a>
+            <a class="px-2 fa-lg ig-ic" href=""><i class="fab fa-instagram"></i></a>
           </div>
         </div>
       </div>
@@ -216,11 +255,11 @@
               laudantium, totam rem aperiam. </p>
 
             <!-- Linkedin -->
-            <a class="px-2 fa-lg li-ic"><i class="fab fa-linkedin-in"></i></a>
+            <a class="px-2 fa-lg li-ic" href="https://www.linkedin.com/in/krishnaojha02/"><i class="fab fa-linkedin-in"></i></a>
             <!-- Twitter -->
-            <a class="px-2 fa-lg tw-ic"><i class="fab fa-twitter"></i></a>
+            <a class="px-2 fa-lg tw-ic" href="https://twitter.com/KrishnaOjha02"><i class="fab fa-twitter"></i></a>
             <!-- Github -->
-            <a class="px-2 fa-lg gb-ic"><i class="fab fa-github"></i></a>
+            <a class="px-2 fa-lg gb-ic" href="https://github.com/coder-KO"><i class="fab fa-github"></i></a>
             <!-- Instagram -->
             <a class="px-2 fa-lg ig-ic"><i class="fab fa-instagram"></i></a>
           </div>
@@ -234,7 +273,7 @@
 
   <!-- Footer Section -->
     <footer class="my-0 bg-light">
-      <h1 class="text-center my-4 py-4" style="color: #212121;">&copy; <img src="{% static 'images/imgs/devino.png' %}" alt="Dev.ino" style="width: auto; height: 80px;"></h1>
+      <h3 class="text-center my-4 py-4" style="color: #212121;">&copy; Dev.ino</h3>
     </footer>
     <!-- ./Footer Section -->
   </div>
