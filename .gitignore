@@ -18,7 +18,9 @@ shape_predictor_68_face_landmarks.dat
 try.py
 try1.py
 try2.py
-/chest
+/chest/train/
+/chest/model1_6_10.h5
+/chest/model1_6_15.h5
 /model_for_chest_xrays/model1_6_10.h5
 /model_for_chest_xrays/model1_6_15.h5
 
@@ -31,4 +33,9 @@ new_try.py
 model2_2_10.h5
 model1_new_5_6.h5
 /hackit/model1_6_15.h5
-/hackit/__pycache__
+hackit/__pycache__/
+/hackit/crackit/__pycache__/
+/__pycache__
+/__pycache__/audio_positioning.cpython-36.pyc
+/hackit/hackit/__pycache__/
+/hackit/crackit/migrations
