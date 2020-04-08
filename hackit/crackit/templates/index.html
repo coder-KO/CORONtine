@@ -81,7 +81,10 @@
 
 
   <!-- Home Section -->
-  <div class="view home" id="home" style="background-image: url('{% static 'imgs/bg.jpg' %}')";>
+  <div class="view home" id="home" style="background-image: url('{% static 'imgs/bg.jpg' %}'); background-repeat: no-repeat;background-size:cover;
+	background-position: center;
+	height: 80vh;
+	width: 100%;";>
     <div class="flex-center" style="background: rgba(0,0,0,0.7);">
         <img src="{% static 'images/imgs/CORONtine.png'%}" alt="CORONtine">
     </div>
@@ -127,14 +130,14 @@
 
       {% if data %}
           <div class="com-xl-9" id="main_area">          <!-- Main area column -->
-           <div class="view">
+           <div class="view bg-dark">
           <img src="{% static 'images/imgs/quarantine.png' %}">
         </div>
       </div>
 
     {% else %}
     <div class="com-xl-9" id="main_area";>          <!-- Main area column -->
-      <div class="view"> 
+      <div class="view bg-dark"> 
       <img src="{% static 'images/imgs/devino.png' %}">
       
      </div>
@@ -233,7 +236,7 @@
 
   <!-- Footer Section -->
     <footer class="my-0 bg-light">
-      <h1 class="text-center my-4 py-4" style="color: #212121;">&copy; <img src="{% static 'images/imgs/devino.png' %}" alt="Dev.ino" style="width: auto; height: 80px;"></h1>
+      <h3 class="text-center my-4 py-4" style="color: #212121;">&copy; Dev.ino</h3>
     </footer>
     <!-- ./Footer Section -->
   </div>

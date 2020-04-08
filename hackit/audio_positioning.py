@@ -17,16 +17,16 @@ def arduino_call():
     while 1:
         print(int(arduino.readline()))
 
-        if abs(int(arduino.readline()) - 20) >= 3:
-            while abs(int(arduino.readline()) - 20) >= 3:
-                if int(arduino.readline()) > 20:
+        if abs(int(arduino.readline()) - 40) >= 8:
+            while abs(int(arduino.readline()) - 40) >= 8:
+                if int(arduino.readline()) > 80:
                     print(int(arduino.readline()))
                     play('../hardware/audio-files/guide1.mp3')
-                elif int(arduino.readline()) < 20:
+                elif int(arduino.readline()) < 80:
                     print(int(arduino.readline()))
                     play('../hardware/audio-files/guide2.mp3')
         else:
             print(int(arduino.readline()))
-            play('../hardware/audio-files/guide3.mp3')
+            play('../hardware/audio-files/guide4.mp3')
             break
 
