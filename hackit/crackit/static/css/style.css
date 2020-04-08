@@ -26,7 +26,7 @@ html, body{
 	/* background-image: url('/img/bg.jpg');  */
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-position: center center;
+	background-position: center;
 	height: 80vh;
 	width: 100%;
 }
@@ -64,7 +64,7 @@ html, body{
 }
 #main_area{
 	width: 70%;
-	height: 70vh;
+	height: 80vh;
 	margin-right: 20px;
 	border-radius: 10px;
 	background-color: #212121;

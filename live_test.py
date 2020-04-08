@@ -16,10 +16,6 @@ import numpy as np
 # K.clear_session()
 import time
 
-with tf.Session() as sess:
-    sess.run(tf.global_variables_initializer())
-
-
 model = load_model("model2_2_11.h5")
 # model._make_predict_function()
 graph1 = tf.get_default_graph()
@@ -34,11 +30,9 @@ model.compile(loss="categorical_crossentropy",
 )
 
 
-dir = 'F:\Github\HackCovid\Dev.ino_HackCovid19\hackit\image_store'
-path = 'F:\Github\HackCovid\Dev.ino_HackCovid19\hackit\predicted'
 
-# dir = '/home/ekta3501/opensource/Dev.ino_HackCovid19/image_store/'
-# path = '/home/ekta3501/opensource/Dev.ino_HackCovid19/predicted/'
+dir = '/home/ekta3501/opensource/Dev.ino_HackCovid19/image_store/'
+path = '/home/ekta3501/opensource/Dev.ino_HackCovid19/predicted/'
 
 def predicting_cough():
     cap = cv.VideoCapture(0)
@@ -48,7 +42,7 @@ def predicting_cough():
     print(ls)
     acc_count=0
 
-    while (1):
+    while cap.isOpened():
         ret, frame = cap.read()
         print("i is and acc_count is ",i,acc_count)
         # if frame is read correctly ret is True
@@ -69,22 +63,15 @@ def predicting_cough():
 
         images = np.vstack([x])
             # plt.imshow(images)
-        # classes = model.predict_classes(images,batch_size=3)
-        with graph1.as_default():
-                    classes = model.predict_classes(images,batch_size=3)
-
-
+        classes = model.predict_classes(images,batch_size=3)
         ls[i] = classes[0]
 
         if(ls[i]==0):
             acc_count+=1
-            if(acc_count>=20):
+            if(acc_count>=12):
                 shutil.copy(name,path)
-                cap.release()
-                cv.destroyAllWindows()
 
-
-                return 1
+                # return 1
                 # try:
                 #     myimage=accident_images+'image' + st(i-1) + '.jpg'
 
@@ -105,12 +92,14 @@ def predicting_cough():
         if cv.waitKey(20) & 0xFF == ord('q'): #running video till end
             break
 
-        if count ==500 :
-            break
+        # if count == 60:
+        #     break
 
 
     print(ls)
+    return 0
     cap.release()
     cv.destroyAllWindows()
 
-    return 0
+
+predicting_cough()

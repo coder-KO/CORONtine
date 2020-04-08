@@ -15,10 +15,10 @@ def clean(L):
     return newl
 cleandata=clean(rawdata)
 
-def write(L):
-    file=open("data.txt",mode='w')
-    for i in range(len(L)):
-        file.write(L[i]+'\n')
-    file.close()
+# def write(L):
+#     file=open("data.txt",mode='w')
+#     for i in range(len(L)):
+#         file.write(L[i]+'\n')
+#     file.close()
 
-write(cleandata)
+print(cleandata)
