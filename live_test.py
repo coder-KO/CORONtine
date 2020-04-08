@@ -16,7 +16,7 @@ import numpy as np
 # K.clear_session()
 import time
 
-model = load_model("model1_new_5_6.h5")
+model = load_model("model2_2_11.h5")
 # model._make_predict_function()
 graph1 = tf.get_default_graph()
 
@@ -71,7 +71,7 @@ def predicting_cough():
             if(acc_count>=12):
                 shutil.copy(name,path)
 
-                return 1
+                # return 1
                 # try:
                 #     myimage=accident_images+'image' + st(i-1) + '.jpg'
 
@@ -92,8 +92,8 @@ def predicting_cough():
         if cv.waitKey(20) & 0xFF == ord('q'): #running video till end
             break
 
-        if count == 60:
-            break
+        # if count == 60:
+        #     break
 
 
     print(ls)

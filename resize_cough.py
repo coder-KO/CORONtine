@@ -5,7 +5,7 @@
 from PIL import Image
 import os, sys
 
-path = "/home/ekta3501/opensource/Dev.ino_HackCovid19/dataset/train/healthy/"
+path = "/home/ekta3501/opensource/Dev.ino_HackCovid19/dataset/train/cough/"
 dirs = os.listdir( path )
 
 def resize():

@@ -13,9 +13,9 @@ from keras.preprocessing.image import ImageDataGenerator,load_img
 WIDTH=28
 HEIGHT=28
 IMAGE_SIZE=(28,28,3)
-SAMPLES=40*2
-BATCH_SIZE=3
-EPOCHS = 7
+SAMPLES=41*2
+BATCH_SIZE=2
+EPOCHS = 8
 
 train_dir = "/home/ekta3501/opensource/Dev.ino_HackCovid19/dataset/train/"
 
@@ -80,4 +80,4 @@ model.fit_generator( training_generator,
 #TODO: assure model is not overfitting
 
 #batch size , epochs
-model.save('model1_new_5_6.h5')
+model.save('model2_2_9.h5')

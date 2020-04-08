@@ -20,7 +20,7 @@ with tf.Session() as sess:
     sess.run(tf.global_variables_initializer())
 
 
-model = load_model("model1_new_5_6.h5")
+model = load_model("model2_2_11.h5")
 # model._make_predict_function()
 graph1 = tf.get_default_graph()
 
